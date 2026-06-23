@@ -1,0 +1,19 @@
+<launch>
+  <arg name="veh" default="$(optenv VEHICLE_NAME duckiebot)" />
+  <arg name="deliveries" default="$(optenv DELIVERIES_PATH /data/deliveries.json)" />
+
+  <include file="$(find duckietown_demos)/launch/lane_following.launch">
+    <arg name="veh" value="$(arg veh)" />
+  </include>
+
+  <node pkg="duckie_day_solution" type="duckie_day_node.py" name="duckie_day_node" output="screen">
+    <param name="deliveries" value="$(arg deliveries)" />
+    <param name="base_speed" value="0.28" />
+    <param name="stop_duration" value="3.0" />
+    <param name="delivery_duration" value="3.0" />
+    <remap from="~image/compressed" to="/$(arg veh)/camera_node/image/compressed" />
+    <remap from="~lane_pose" to="/$(arg veh)/lane_filter_node/lane_pose" />
+    <remap from="~wheels_cmd" to="/$(arg veh)/car_cmd_switch_node/cmd" />
+    <remap from="~delivery_state" to="/$(arg veh)/duckie_day/delivery_state" />
+  </node>
+</launch>

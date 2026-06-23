@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-07",
+  "nombre_punto": "Zona Aprobado",
+  "accion": "desviar_aprobado",
+  "resultado": "aprobado",
+  "repeticiones": 1,
+  "tiempo_detencion": 5,
+  "retornar_punto_partida": false
+}

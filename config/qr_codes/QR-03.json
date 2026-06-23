@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-03",
+  "nombre_punto": "Planta de Proceso Calbuco",
+  "accion": "encender_luces",
+  "tipo_luz": "frontal",
+  "repeticiones": 1,
+  "tiempo_detencion": 8,
+  "retornar_punto_partida": false
+}

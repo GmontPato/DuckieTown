@@ -1,0 +1,63 @@
+{
+  "competition": "Duckie Day 2026 - Puerto Montt",
+  "challenges": [
+    {
+      "id": 1,
+      "nombre": "Alerta Sanitaria - Reaccion en Tiempo Real",
+      "tipo": "clasificatoria",
+      "descripcion": "Simular la reaccion ante una alerta sanitaria de piojo de mar durante una ruta de inspeccion en la zona de cultivo",
+      "qrs": ["QR-05"],
+      "secuencia": [
+        {"accion": "navegar", "descripcion": "Iniciar desde punto I y navegar por la pista"},
+        {"accion": "detectar_qr", "qr": "QR-05", "descripcion": "Detectar QR de alerta sanitaria piojo de mar"},
+        {"accion": "parar", "descripcion": "Interrumpir ruta inmediatamente"},
+        {"accion": "encender_luces", "tipo": "trasera", "repeticiones": 3, "descripcion": "Encender luces traseras 3 veces"},
+        {"accion": "retornar_base", "descripcion": "Retornar al punto base I para reportar alerta"},
+        {"accion": "esperar", "tiempo": 10, "descripcion": "Esperar 10 segundos instrucciones del equipo tecnico"},
+        {"accion": "reanudar", "descripcion": "Reanudar ruta original y completar recorrido"},
+        {"accion": "completar", "descripcion": "Retornar a punto de partida I"}
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Trazabilidad Completa - De la Ova al Plato",
+      "tipo": "semifinal",
+      "descripcion": "Recorrer secuencialmente las 3 zonas de la cadena productiva del salmon en orden correcto: Piscicultura Puelo, Jaulas Solar Isla Huar y Planta de Proceso Calbuco",
+      "qrs": ["QR-01", "QR-02", "QR-03"],
+      "secuencia": [
+        {"accion": "navegar", "descripcion": "Iniciar desde punto I"},
+        {"accion": "detectar_qr", "qr": "QR-01", "descripcion": "Visitar Piscicultura Puelo - zona de origen y crianza"},
+        {"accion": "encender_luces", "tipo": "frontal", "repeticiones": 1, "descripcion": "Confirmar trazabilidad"},
+        {"accion": "esperar", "tiempo": 8, "descripcion": "Detenerse 8 segundos"},
+        {"accion": "detectar_qr", "qr": "QR-02", "descripcion": "Visitar Jaulas Solar Isla Huar - zona de cultivo marino"},
+        {"accion": "encender_luces", "tipo": "frontal", "repeticiones": 1, "descripcion": "Confirmar trazabilidad"},
+        {"accion": "esperar", "tiempo": 8, "descripcion": "Detenerse 8 segundos"},
+        {"accion": "detectar_qr", "qr": "QR-03", "descripcion": "Visitar Planta de Proceso Calbuco - procesamiento y empaque"},
+        {"accion": "encender_luces", "tipo": "frontal", "repeticiones": 1, "descripcion": "Confirmar trazabilidad"},
+        {"accion": "esperar", "tiempo": 8, "descripcion": "Detenerse 8 segundos"},
+        {"accion": "completar", "descripcion": "Retornar a punto de partida I"}
+      ],
+      "restricciones": {
+        "orden_estricto": true,
+        "bloquear_si_omitido": true
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Inspeccion con Vision Artificial",
+      "tipo": "final",
+      "descripcion": "Clasificar objetos como aprobados o defectuosos mediante vision artificial en el Punto de Despacho Chinquihue",
+      "qrs": ["QR-06", "QR-07", "QR-08", "QR-00"],
+      "secuencia": [
+        {"accion": "navegar", "descripcion": "Iniciar desde punto I"},
+        {"accion": "detectar_qr", "qr": "QR-06", "descripcion": "Llegar a Zona de Inspeccion, capturar y procesar imagen del objeto"},
+        {"accion": "clasificar", "descripcion": "Clasificar objeto como aprobado o defectuoso"},
+        {"accion": "desviar", "resultado": "aprobado", "qr": "QR-07", "descripcion": "Si aprobado, desviar a Zona Aprobado"},
+        {"accion": "desviar", "resultado": "defectuoso", "qr": "QR-08", "descripcion": "Si defectuoso, desviar a Zona Defectuoso"},
+        {"accion": "detectar_qr", "qr": "QR-00", "descripcion": "Retornar a Base y registrar resultado del ciclo"},
+        {"accion": "esperar", "tiempo": 5, "descripcion": "Detenerse 5 segundos"},
+        {"accion": "completar", "descripcion": "Mision completada"}
+      ]
+    }
+  ]
+}

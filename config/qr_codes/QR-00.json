@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-00",
+  "nombre_punto": "Punto de Partida / Base",
+  "accion": "registrar_clasificacion",
+  "resultado": "completado",
+  "repeticiones": 1,
+  "tiempo_detencion": 5,
+  "retornar_punto_partida": true
+}

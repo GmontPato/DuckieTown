@@ -1,0 +1,37 @@
+{
+  "competition": "Duckie Day 2026 - Puerto Montt",
+  "track": "Salmon Feed Delivery Circuit",
+  "date": "2026-06-25",
+  "deliveries": [
+    {
+      "id": "QR001",
+      "station": "P1",
+      "zone": "Centro de Engorda Temprana",
+      "feed": "Alimento Salmón Iniciador A",
+      "kg": 50.0,
+      "priority": 1
+    },
+    {
+      "id": "QR002",
+      "station": "P2",
+      "zone": "Centro de Engorda Intermedia",
+      "feed": "Alimento Salmón Crecimiento B",
+      "kg": 30.0,
+      "priority": 2
+    },
+    {
+      "id": "QR003",
+      "station": "P3",
+      "zone": "Centro de Engorda Final",
+      "feed": "Alimento Salmón Engorda C",
+      "kg": 40.0,
+      "priority": 3
+    }
+  ],
+  "rules": {
+    "order": "sequential",
+    "max_time_seconds": 300,
+    "collision_penalty_seconds": 10,
+    "track_exit_penalty_seconds": 15
+  }
+}

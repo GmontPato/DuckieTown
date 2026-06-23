@@ -1,0 +1,23 @@
+<launch>
+  <arg name="veh" default="default" />
+  <arg name="deliveries" default="$(optenv DELIVERIES_PATH /data/deliveries.json)" />
+
+  <node name="delivery_manager" pkg="duckie_day_solution" type="delivery_manager.py" output="screen">
+    <param name="veh" value="$(arg veh)" />
+    <param name="deliveries" value="$(arg deliveries)" />
+  </node>
+
+  <node name="safety_monitor" pkg="duckie_day_solution" type="safety_monitor.py" output="screen">
+    <param name="veh" value="$(arg veh)" />
+    <param name="max_speed" value="0.5" />
+    <param name="max_steering" value="1.0" />
+  </node>
+
+  <include file="$(find duckietown_demos)/launch/lane_following.launch">
+    <arg name="veh" value="$(arg veh)" />
+  </include>
+
+  <include file="$(find duckietown_demos)/launch/apriltag_detector.launch">
+    <arg name="veh" value="$(arg veh)" />
+  </include>
+</launch>

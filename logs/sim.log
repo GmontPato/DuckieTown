@@ -1,0 +1,112 @@
+TERM environment variable not set.
+
+  ╔══════════════════════════════════════════════╗
+  ║   🦆 DUCKIE DAY 2026 - PUERTO MONTT        ║
+  ║   Desafíos Oficiales - Industria Salmonera   ║
+  ╚══════════════════════════════════════════════╝
+
+  DESAFÍOS OFICIALES:
+  [1] 🏁 Clasificatoria - Alerta Sanitaria
+      Reacción en tiempo real ante piojo de mar
+
+  [2] 🏁 Semifinal - Trazabilidad Completa
+      De la Ova al Plato (3 estaciones secuenciales)
+
+  [3] 🏁 Final - Inspección con Visión Artificial
+      Clasificación automática en Chinquihue
+
+  ───────────────────────────────────────────────
+  [4] 🎮 Control Manual
+      Flechas: mover | SHIFT: turbo | ESPACIO: frenar
+
+  [5] 🤖 Competencia Automática (demo)
+      Lane following + entregas secuenciales PID
+
+  Controles durante simulación:
+    C  = cambiar cámara (1ra ↔ 3ra persona)
+    R  = resetear robot
+    ESC = salir
+
+  Selecciona una opción [1-5/q]: TERM environment variable not set.
+/opt/conda/lib/python3.7/site-packages/gym/logger.py:30: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  warnings.warn(colorize('%s: %s'%('WARN', msg % args), 'yellow'))
+
+  Entregas: 3
+    QR001: P1 -> Alimento Salmón Iniciador A (50.0kg)
+    QR002: P2 -> Alimento Salmón Crecimiento B (30.0kg)
+    QR003: P3 -> Alimento Salmón Engorda C (40.0kg)
+  ESC: salir | C: cámara | R: reset
+
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Cámara cambiada a: 3ra Persona
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  📦 Entrega P1: Alimento Salmón Iniciador A
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  📦 Entrega P2: Alimento Salmón Crecimiento B
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  Modo conducción: RECTO  직선
+  Modo conducción: CURVA 꺾
+  📦 Entrega P3: Alimento Salmón Engorda C
+
+  ========================================
+  🏆 EVALUACIÓN SEGÚN RÚBRICA DUCKIE DAY
+  ========================================
+  - Tiempo de ejecución: 70.2s
+  - Precisión: 3/3 entregas en orden OK
+  - Seguridad operativa: 0 colisiones
+  - Robustez del sistema: Excepciones manejadas
+  ========================================
+
+
+  ╔══════════════════════════════════════════════╗
+  ║   🦆 DUCKIE DAY 2026 - PUERTO MONTT        ║
+  ║   Desafíos Oficiales - Industria Salmonera   ║
+  ╚══════════════════════════════════════════════╝
+
+  DESAFÍOS OFICIALES:
+  [1] 🏁 Clasificatoria - Alerta Sanitaria
+      Reacción en tiempo real ante piojo de mar
+
+  [2] 🏁 Semifinal - Trazabilidad Completa
+      De la Ova al Plato (3 estaciones secuenciales)
+
+  [3] 🏁 Final - Inspección con Visión Artificial
+      Clasificación automática en Chinquihue
+
+  ───────────────────────────────────────────────
+  [4] 🎮 Control Manual
+      Flechas: mover | SHIFT: turbo | ESPACIO: frenar
+
+  [5] 🤖 Competencia Automática (demo)
+      Lane following + entregas secuenciales PID
+
+  Controles durante simulación:
+    C  = cambiar cámara (1ra ↔ 3ra persona)
+    R  = resetear robot
+    ESC = salir
+
+  Selecciona una opción [1-5/q]: Traceback (most recent call last):
+  File "/scripts/duckie_day_menu.py", line 460, in <module>
+    main()
+  File "/scripts/duckie_day_menu.py", line 431, in main
+    choice = input("  Selecciona una opción [1-5/q]: ").strip().lower()
+EOFError: EOF when reading a line

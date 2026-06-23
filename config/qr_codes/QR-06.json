@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-06",
+  "nombre_punto": "Zona de Inspeccion",
+  "accion": "clasificar_objeto",
+  "resultado": "pendiente",
+  "repeticiones": 1,
+  "tiempo_detencion": 8,
+  "retornar_punto_partida": false
+}

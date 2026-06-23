@@ -1,0 +1,10 @@
+{
+  "qr_id": "QR-05",
+  "nombre_punto": "Alerta Sanitaria",
+  "tipo_alerta": "piojo_de_mar",
+  "accion": "encender_luces",
+  "tipo_luz": "trasera",
+  "repeticiones": 3,
+  "tiempo_detencion": 10,
+  "retornar_punto_partida": true
+}

@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-01",
+  "nombre_punto": "Piscicultura Puelo",
+  "accion": "encender_luces",
+  "tipo_luz": "frontal",
+  "repeticiones": 1,
+  "tiempo_detencion": 8,
+  "retornar_punto_partida": false
+}

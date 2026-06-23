@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>duckie_day_solution</name>
+  <version>1.0.0</version>
+  <description>Duckie Day 2026 - Salmon Feed Delivery Solution</description>
+  <maintainer email="team@duckiebot.cl">Duckie Day Team</maintainer>
+  <license>MIT</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>duckietown_msgs</depend>
+  <depend>visualization_msgs</depend>
+</package>

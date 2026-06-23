@@ -1,0 +1,9 @@
+{
+  "qr_id": "QR-08",
+  "nombre_punto": "Zona Defectuoso",
+  "accion": "desviar_defectuoso",
+  "resultado": "defectuoso",
+  "repeticiones": 1,
+  "tiempo_detencion": 5,
+  "retornar_punto_partida": false
+}
