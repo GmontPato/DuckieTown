@@ -1,0 +1,18 @@
+# Docker images requeridas para DuckieTown (duckie4)
+# Arquitectura: arm64v8 (Jetson Nano)
+# 
+# Para descargar todas:
+#   bash pull.sh
+
+duckietown/dt-core:daffy-arm64v8
+duckietown/dt-ros-commons:v4.3.0-arm64v8
+duckietown/dt-device-online:v4.3.0-arm64v8
+duckietown/dt-files-api:v4.1.0-arm64v8
+duckietown/dt-device-proxy:v4.2.0-arm64v8
+duckietown/dt-code-api:v4.1.0-arm64v8
+duckietown/dt-device-health:v4.2.1-arm64v8
+duckietown/dt-car-interface:v4.1.0-arm64v8
+duckietown/dt-duckiebot-interface:v4.3.2-arm64v8
+duckietown/dt-device-dashboard:v4.1.0-arm64v8
+duckietown/dt-rosbridge-websocket:v4.1.0-arm64v8
+duckietown/portainer:daffy-arm64v8

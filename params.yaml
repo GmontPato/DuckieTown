@@ -1,0 +1,67 @@
+# Parametros tuneados del lane_controller_node
+# DuckieTown - duckie4
+# 
+# Estos valores se aplican via rosparam set DESPUES
+# de que el FSM haya hecho la transicion a LANE_FOLLOWING
+
+lane_controller_node:
+  # Velocidad nominal (m/s)
+  v_bar: 0.30                    # Original: 0.19
+
+  # Ganancia proporcional - error lateral (d)
+  k_d: -10.0                     # Original: -6.0
+
+  # Ganancia proporcional - error angular (phi)
+  k_theta: -8.0                  # Original: -5.0
+
+  # Ganancia integral - error lateral
+  k_Id: -0.5                     # Original: -0.3
+
+  # Ganancia integral - error angular
+  k_Iphi: 0.0                    # Sin cambios
+
+  # Maximo error lateral permitido antes de saturar
+  d_thres: 0.12                  # Original: 0.2615
+
+  # Limites de error angular (theta)
+  theta_thres_min: -0.5
+  theta_thres_max: 0.75
+
+  # Limites integrales
+  integral_bounds:
+    d:
+      bot: -0.3
+      top: 0.3
+    phi:
+      bot: -1.2
+      top: 1.2
+
+  # --- MODIFICACION: Boundary Enforcement ---
+  # Limite linea amarilla (izquierda): no pasar de d = -0.10
+  boundary_yellow: -0.10
+  # Limite linea blanca (derecha): no pasar de d = 0.10
+  boundary_white: 0.10
+  # Margen suave donde empieza la fuerza repulsiva
+  boundary_margin: 0.04
+  # Ganancia de la fuerza repulsiva
+  k_boundary: 12.0
+
+  # --- MODIFICACION: Obstacle Avoidance ---
+  # Desplazamiento a la derecha cuando detecta obstaculo (m)
+  obstacle_offset: 0.06
+
+  # Resoluciones del filtro
+  d_resolution: 0.011
+  phi_resolution: 0.051
+
+  # Offsets
+  d_offset: 0.0
+  omega_ff: 0.0
+
+  # Verbosidad
+  verbose: 0
+
+  # Stop line slowdown
+  stop_line_slowdown:
+    start: 0.6
+    end: 0.15
